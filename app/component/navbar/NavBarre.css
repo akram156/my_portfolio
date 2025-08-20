@@ -1,0 +1,92 @@
+.container {
+  color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
+  align-items: center;
+  .logo-container {
+    color: #38bdf8;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .links-container {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      list-style: none;
+      li {
+        font-weight: 600;
+        font-size: large;
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: italic;
+      }
+
+      li:hover {
+      }
+    }
+  }
+  .links-container ul li {
+    position: relative;
+    font-weight: 600;
+    font-size: large;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    cursor: pointer;
+  }
+  .links-container ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* space between text & underline */
+    width: 100%;
+    height: 2px;
+    background-color: aliceblue;
+    transform: scaleX(0);
+    transform-origin: left; /* makes animation start from left */
+    transition: transform 0.3s ease;
+  }
+  .links-container ul li:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    display: flex !important;
+    flex-direction: column !important;
+    /* background-color: #fff; */
+  }
+  .links-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+  li {
+    font-size: small;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+  }
+  .logo-container {
+    display: block !important;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    display: block;
+    width: 100%;
+    margin: auto;
+    color: #38bdf8;
+  }
+}

@@ -1,0 +1,78 @@
+.div {
+  display: flex;
+  border-radius: 10px;
+  height: 100%; /* Take full height of grid cell */
+  flex-direction: column;
+
+  background: linear-gradient(135deg, #2c003e, #390ca3, #4362eef3);
+}
+.first-div {
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  z-index: 11;
+}
+.second-div {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.192);
+  height: 100%;
+}
+.head {
+  font-family: "Edu NSW ACT Cursive", cursive !important;
+  display: flex !important;
+  font-weight: 800 !important;
+  text-shadow: 2px 2px 60px black;
+  color: rgba(255, 255, 0, 0.671) ;
+  font-style: normal;
+  flex-direction: row;
+  justify-content: space-around !important;
+  align-items: center;
+  margin: 10px;
+  flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.body {
+  display: flex;
+  color: black;
+  padding: 1rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  text-shadow: 2px 2px 60px black;
+  font-weight: 600;
+  font-style: italic;
+  flex-grow: 1; /* Grow to fill available space */
+}
+
+.progressBar {
+  padding: 0 1rem 1rem 1rem;
+  flex-shrink: 0; /* Prevent progress bar from shrinking */
+}
+.container-fluid {
+  display: flex;
+  justify-content: center;
+}
+@keyframes progressbar {
+  0% {
+    background: linear-gradient(45deg, aqua, yellow);
+  }
+  25% {
+    background: linear-gradient(45deg, yellow, aqua);
+  }
+  75% {
+    background: linear-gradient(45deg, aqua, yellow);
+  }
+  100% {
+    background: linear-gradient(45deg, yellow, aqua);
+  }
+}
+.bar {
+  box-shadow: 1px 1px 8px black;
+}
+.progressBar .progress-bar {
+  animation: progressbar 1s infinite linear;
+  color: black;
+  box-shadow: 1px 1px 8px black;
+  font-weight: 500 !important;
+}

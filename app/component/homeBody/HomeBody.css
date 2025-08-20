@@ -1,0 +1,17 @@
+.main-container {
+  display: flex;
+  margin-top: -3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1500px) {
+  .main-container {
+    flex-direction: column !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .main-container {
+    margin-top: -8rem;
+  }
+}
