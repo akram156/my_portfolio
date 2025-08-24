@@ -87,7 +87,7 @@ const Info = () => {
               transition={{ duration: 0.3 }}
             ></motion.i>
           </Link>
-          <Link href={"https://github.com/akram156"} target="_blank">
+          <Link href={"https://www.linkedin.com/in/akram-benchouche-359304376/"} target="_blank">
             <motion.i
               className="fa-brands fa-linkedin fa-2xl"
               style={{ color: "#FACC15", cursor: "pointer" }}

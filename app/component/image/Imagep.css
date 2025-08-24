@@ -20,7 +20,7 @@
   align-content: center;
   display: flex;
   justify-content: center;
-  padding: 10rem;
+  padding: 8rem;
   margin-left: 10rem;
   .img {
     border-radius: 50% !important;
@@ -31,7 +31,7 @@
 }
 
 /* !-------------------------------------------------------------------- */
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1580px) {
   .img-container {
     /* display: block !important; */
     width: 100%;

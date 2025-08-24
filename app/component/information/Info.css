@@ -46,7 +46,7 @@
   width: 9rem;
   cursor: pointer;
 }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1580px) {
   .info-container {
     width: 100vw !important;
     justify-content: center;
