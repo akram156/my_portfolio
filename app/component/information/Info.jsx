@@ -11,7 +11,12 @@ const Info = () => {
     // typeSpeed:200
   });
   const [cursor, setCursor] = useState(true);
+  const [isWide, setIsWide] = useState(false);
+
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsWide(window.innerWidth > 800);
+    }
     setTimeout(() => {
       setCursor(false);
     }, 4000);
@@ -46,7 +51,7 @@ const Info = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ duration: 0.2, x: { duration: 1 } }}
-              initial={{ opacity: 0, x: window.innerWidth > 800 ? -400 : -100 }}
+              initial={{ opacity: 0,x: isWide ? -400 : -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               className="btn-cv"
               viewport={{ once: true }}
@@ -58,7 +63,7 @@ const Info = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.2, x: { duration: 1 } }}
-            initial={{ opacity: 0, x: window.innerWidth > 800 ? 400 : 100 }}
+            initial={{ opacity: 0, x: isWide ? -400 : -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             className="btn-cv"
             viewport={{ once: true }}
